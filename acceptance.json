@@ -1,0 +1,9 @@
+{
+  "jsp_id": "JSP-000399",
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0301-0400.md#JSP-000399",
+  "original_question_en": "Can a finite set be uniquely recovered from the multiset of all sums of a prescribed number of distinct elements?",
+  "required_theorems": [
+    "UR_characterization"
+  ],
+  "notes": "Target is the full SeSt58/GFS62/Erdős-494 UR characterization, not counterexamples or partial positive cases alone."
+}
