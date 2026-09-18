@@ -6,7 +6,7 @@ prize_ready: false
 github_owner: Yi-111-a
 lean_repository: https://github.com/Yi-111-a/jsp-000399-ksums-reconstruction
 branch: main
-commit_sha: ""
+commit_sha: "2adc328516f646fb7c097510da78e2051f07f5d0"  # WIP tip; not prize_ready
 headline_theorems:
   - UR_characterization
 roles:
