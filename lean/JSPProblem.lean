@@ -4,6 +4,14 @@ import JSPProblem.Counterexample
 import JSPProblem.Duality
 import JSPProblem.Tao
 import JSPProblem.ThueMorse
+import JSPProblem.PowSum
+import JSPProblem.PowSumTwo
+import JSPProblem.Newton
+import JSPProblem.Transport
+import JSPProblem.Moser
+import JSPProblem.Negatives
+import JSPProblem.URTwo
+import JSPProblem.Characterization
 
 /-!
 # JSP-000399 — Erdős Problem 494 (Selfridge–Straus / Gordon–Fraenkel–Straus)
@@ -21,8 +29,14 @@ This development (see `JSP399` namespace across the imported modules) proves:
   `n = 2k` family (sum-zero `A` vs `-A`); the degenerate cases `n < k`,
   `k = 0`, `n = k`; complement duality `k ↔ n - k`.
 
-The full characterization (for `k = 2`: UR iff `n` is not a power of two;
-for `k ≥ 3`: UR for all sufficiently large `n` outside finite exceptional
-sets such as `{27, 486}` for `k = 3`) is the content of Selfridge–Straus 1958
-and Gordon–Fraenkel–Straus 1962; the open gaps are documented per-lemma.
+`UR_characterization` (in `JSPProblem/Characterization.lean`) bundles the
+proved characterization: the exact `k = 2` theorem (`UR ℤ 2 n` iff `n` is not
+a power of two — Selfridge–Straus, proved here via the power-sum transfer
+identity `psumk_two` and Newton's identities `finset_eq_of_psum_eq`), all
+universal exceptional families (`k = 0`, `n < k`, `n = k`, `n = 2k`), and the
+recoveries obtained by complement duality (`k = 1`, `k = n - 1`, `n = k + 1`).
+The Moser coefficient `moserF k j n` and its nonvanishing at prime divisors
+`p > k` of `n` (`moserF_ne_zero_of_prime_dvd`) are proved in
+`JSPProblem/Moser.lean`; the remaining `k ≥ 3` positive cases need the general
+Moser transfer identity, documented per-lemma.
 -/
